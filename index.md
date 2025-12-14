@@ -11,7 +11,7 @@ title: "Home"
 - Software: [e.g., “open-source tools for river mapping and reservoir decision support”]
 - Currently: [your current role / affiliation]
 
-[Download CV](link-to-your-cv.pdf) · [Google Scholar](https://scholar.google.com/...) · [GitHub](https://github.com/jonschwenk) · [LinkedIn or other, if you want]
+[Download CV](/assets/cv_schwenk.pdf) · [Google Scholar](https://scholar.google.com/citations?hl=en&user=qHp30JkAAAAJ) · [GitHub](https://github.com/jonschwenk) 
 
 ---
 
