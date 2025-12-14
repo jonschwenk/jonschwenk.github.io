@@ -2,6 +2,14 @@ title: "Jon Schwenk"
 description: "Hydro- and river-ologist | Software Developer | Data Scientist | Solving Practical Problems | ...and fun ones"
 theme: minima
 
+# Top navigation (order matters)
+header_pages:
+  - research.md
+  - software.md
+  - publications.md
+  - experience.md
+  - contact.md
+
 # Useful links for the header/footer
 author:
   name: "Jon Schwenk"
