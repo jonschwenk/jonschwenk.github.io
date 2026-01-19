@@ -1,0 +1,212 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+/* -------------------------------------------------------------------------- */
+/* Site-wide custom styles                                                    */
+/* -------------------------------------------------------------------------- */
+
+/* “TOC pills” used on Software/Publications pages (and anywhere else). */
+.toc-pills {
+  margin: 0.5rem 0 1rem 0;
+  line-height: 2.2;
+}
+
+.toc-pill {
+  display: inline-block;
+  padding: 0.18rem 0.65rem;
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  margin: 0 0.4rem 0.4rem 0;
+  text-decoration: none;
+  color: $brand-color;
+}
+
+.toc-pill:visited {
+  color: $brand-color;
+}
+
+.toc-pill:hover {
+  background: #f6f6f6;
+}
+
+.toc-pill:focus {
+  outline: 2px solid rgba(42, 122, 226, 0.35);
+  outline-offset: 2px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Footer banner: graded background + strong text                             */
+/* -------------------------------------------------------------------------- */
+
+.site-footer{
+  position: relative;
+  overflow: hidden;
+  height: 90px;
+
+  /* create a predictable stacking context so the overlay can't darken text */
+  isolation: isolate;
+
+  /* default text color */
+  color: #fff;
+}
+
+/* Background image (graded) */
+.site-footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index: 0;
+
+  background: url("{{ '/assets/images/index/human_impacts_banner2.png' | relative_url }}") center / cover no-repeat;
+  filter: saturate(0.85) contrast(1.10) brightness(0.95);
+  transform: scale(1.01); /* avoids edge seams */
+}
+
+/* Dark overlay for legibility (behind text) */
+.site-footer::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index: 0;
+
+  background: linear-gradient(
+    rgba(8, 18, 28, 0.55),
+    rgba(8, 18, 28, 0.35)
+  );
+}
+
+/* Put footer content above background layers */
+.site-footer .wrapper{
+  position: relative;
+  z-index: 1;
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Force footer text to stay bright (theme overrides can darken it) */
+.site-footer,
+.site-footer *{
+  color: #fff !important;
+}
+
+/* Hide extra footer blocks */
+.site-footer .footer-heading,
+.site-footer .contact-list,
+.site-footer .social-media-list{
+  display: none;
+}
+
+.site-footer .footer-col-wrapper,
+.site-footer .footer-col{
+  float: none;
+  width: 100%;
+  margin: 0;
+}
+
+/* Make the line pop */
+.site-footer p{
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+
+  /* slightly lighter pill so it doesn't feel heavy, but still readable */
+  background: rgba(0,0,0,0.28);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.30);
+
+  /* stronger shadow = brighter perceived text */
+  text-shadow: 0 2px 12px rgba(0,0,0,0.75);
+}
+
+/* Links */
+.site-footer a{
+  color:#fff !important;
+  text-decoration: underline;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Full-page background (stretched, no tiling)                                */
+/* -------------------------------------------------------------------------- */
+
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("{{ '/assets/images/index/lena.svg' | relative_url }}");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 200vw 200vh; /* stretch to fill */
+
+  opacity: 0.15; 
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(0.6px);
+
+}
+
+/* Minima sets a solid body background that hides the watermark in margins */
+body {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+/* Optional: if you also want it behind the header/footer areas */
+.site-header,
+.site-footer {
+  background-color: transparent !important;
+}
+
+/* Your “paper panel” (fine to keep; it will intentionally mute the bg) */
+.page-content .wrapper {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+@media print {
+  html::before { display: none; }
+  .page-content .wrapper { background: transparent; padding: 0; }
+}
+
+@media (max-width: 700px) {
+  html::before { opacity: 0.05; }
+}
+
+/* Bio photo */
+:root {
+  --bio-headshot-size: 260px; /* knob */
+}
+
+.bio-wrap {
+  overflow: hidden; /* clears the float cleanly */
+}
+
+.bio-wrap .bio-headshot {
+  float: left;
+  width: var(--bio-headshot-size);
+  height: auto;
+  margin: 0.25rem 1.25rem 0.75rem 0;
+  border-radius: 14px;
+}
+
+@media (max-width: 700px) {
+  .bio-wrap .bio-headshot {
+    float: none;
+    display: block;
+    width: min(70vw, 260px);
+    margin: 0 0 1rem 0;
+  }
+}

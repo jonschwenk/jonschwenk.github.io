@@ -1,0 +1,19 @@
+title: "Jon Schwenk"
+description: "Data and AI for better water decisions"
+theme: minima
+
+# Top navigation (order matters)
+header_pages:
+  - research.md
+  - software.md
+  - publications.md
+  - people.md
+  - cv.md
+  - contact.md
+
+# Useful links for the header/footer
+# author: "Jon Schwenk"
+# email: "jonschwenk@gmail.com"
+
+# Disable blog posts for now (we'll just use pages/sections)
+show_excerpts: false
