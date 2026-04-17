@@ -124,7 +124,7 @@ RivGraph is a Python package that extracts river and delta channel network topol
   <img src="{{ '/assets/images/software/rabpro/rabpro_logo.png' | relative_url }}"
        alt="rabpro"
        loading="lazy"
-       style="height:78px; width:250; max-width:100%; display:block;" />
+       style="height:78px; width:250px; max-width:100%; display:block;" />
 </h2>
 
 rabpro (River and Basin Profiler) delineates watershed basins and computes river profiles, slopes, and related longitudinal metrics at global scale. It can also compute contributing-basin statistics for arbitrary raster inputs (e.g., topography, precipitation, vegetation) via Google Earth Engine, providing a flexible bridge between user-defined locations and basin-scale context.
@@ -147,6 +147,9 @@ rabpro (River and Basin Profiler) delineates watershed basins and computes river
 </figure>
 
 ---
+
+<a id="rivmap"></a>
+## RivMAP
 
 <img
   src="{{ '/assets/images/software/rivmap/rivmap.PNG' | relative_url }}"
@@ -180,7 +183,7 @@ Ecopopper was part of a large LANL team's effort that resulted in two [R&D100 Aw
 <figure style="clear: both; margin: 1.25rem auto; text-align: center;">
   <img
     src="{{ '/assets/images/software/ecopop/ecopop_toronto.png' | relative_url }}"
-    alt="rabpro workflow"
+    alt="Ecopopper example output"
     loading="lazy"
     style="display: block; margin: 0 auto; max-width: 900px; width: 95%; height: auto;"
   />
@@ -232,7 +235,7 @@ hillsloper partitions DEMs into constituent hillslopes for high-resolution terre
     style="display: block; margin: 0 auto; max-width: 900px; width: 95%; height: auto;"
   />
   <figcaption style="margin-top: 0.5rem;">
-    <em>Hillsloper breaks DEMs into vector-based representations and characterizations amenable for use with ATS (Advanced Terrestrial Simulator)."</em>
+    <em>Hillsloper breaks DEMs into vector-based representations and characterizations amenable for use with ATS (Advanced Terrestrial Simulator).</em>
   </figcaption>
 </figure>
 
