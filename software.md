@@ -82,7 +82,7 @@ The repository itself includes scripts to build VotE as well as the API (but not
 
 dapper (Data PreParation for ELM Runs) is a toolset for curating, sampling, and formatting the datasets needed to run DOE’s E3SM Land Model (ELM). It automates end-to-end data preparation workflows (meteorological forcings, parameters, and related inputs), leaning on Google Earth Engine and other APIs to make sampling fast, scalable, and flexible for different grid-cell definitions (e.g., polygons like watersheds rather than rectangular grids).
 
-- **Repo:** https://github.com/lanl/dapper  
+- **Repo:** [GitHub](https://github.com/lanl/dapper)  
 - **Tech:** Google Earth Engine (GEE), netCDF/xarray-style workflows, geospatial sampling
 - **Language(s):** Python
 
@@ -98,7 +98,7 @@ dapper (Data PreParation for ELM Runs) is a toolset for curating, sampling, and 
 
 RivGraph is a Python package that extracts river and delta channel network topology (nodes/links) from georeferenced binary mask rasters. It automatically assigns link directionality and computes a range of topologic and morphologic network metrics, supporting reproducible studies of braided rivers and deltas.
 
-- **Repo:** https://github.com/VeinsOfTheEarth/RivGraph  
+- **Repo:** [GitHub](https://github.com/VeinsOfTheEarth/RivGraph)  
 - **Pubs:** [JOSS](https://doi.org/10.21105/joss.02952) · [ESurf Dynamics](https://www.earth-surf-dynam.net/8/87/2020/esurf-8-87-2020.html)
 - **Tech:** image processing, graph analysis, geospatial I/O
 - **Language(s):** Python
@@ -129,7 +129,7 @@ RivGraph is a Python package that extracts river and delta channel network topol
 
 rabpro (River and Basin Profiler) delineates watershed basins and computes river profiles, slopes, and related longitudinal metrics at global scale. It can also compute contributing-basin statistics for arbitrary raster inputs (e.g., topography, precipitation, vegetation) via Google Earth Engine, providing a flexible bridge between user-defined locations and basin-scale context.
 
-- **Repo:** https://github.com/VeinsOfTheEarth/rabpro  
+- **Repo:** [GitHub](https://github.com/VeinsOfTheEarth/rabpro)  
 - **Pubs:** [JOSS](https://doi.org/10.21105/joss.04237)
 - **Tech:** Google Earth Engine (GEE), watershed delineation, raster statistics
 - **Language(s):** Python
@@ -157,7 +157,7 @@ rabpro (River and Basin Profiler) delineates watershed basins and computes river
 
 RivMAP (River Morphodynamics from Analysis of Planforms) is a Matlab toolbox for extracting planform river morphodynamics from binary channel masks. It quantifies centerlines and banklines, width, migration rates, and cutoff events, and was built to support large-scale Landsat-based mapping of river planform change.
 
-- **Repo:** [Mathworks](https://www.mathworks.com/matlabcentral/fileexchange/58264-rivmap-river-morphodynamics-from-analysis-of-planforms), [CSDMS](https://csdms.colorado.edu/wiki/Model:RivMAP)
+- **Repo:** [GitHub](https://github.com/VeinsOfTheEarth/RivMAP)
 - **Pubs:** [Earth and Space Science](https://doi.org/10.1002/2016EA000196)
 - **Tech:** river planform analysis, image processing, Landsat workflows
 - **Language(s):** Matlab
