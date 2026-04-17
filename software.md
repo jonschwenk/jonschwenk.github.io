@@ -136,7 +136,7 @@ rabpro (River and Basin Profiler) delineates watershed basins and computes river
 
 <figure style="clear: both; margin: 1.25rem auto; text-align: center;">
   <img
-    src="{{ '/assets/images/software/rabpro/rabpro_workflow.png' | relative_url }}"
+    src="{{ '/assets/images/software/rabpro/rabpro_workflow.PNG' | relative_url }}"
     alt="rabpro workflow"
     loading="lazy"
     style="display: block; margin: 0 auto; max-width: 900px; width: 95%; height: auto;"
@@ -149,7 +149,7 @@ rabpro (River and Basin Profiler) delineates watershed basins and computes river
 ---
 
 <img
-  src="{{ '/assets/images/software/rivmap/rivmap.png' | relative_url }}"
+  src="{{ '/assets/images/software/rivmap/rivmap.PNG' | relative_url }}"
   alt="RivMAP functionality"
   loading="lazy"
   style="float:left; width:360px; max-width:45%; height:auto; margin:0 1.25rem 1rem 0;"
@@ -203,7 +203,7 @@ RiverMUSE simulates freshwater mussel population dynamics under changing suspend
 
 <figure style="clear: both; margin: 1.25rem auto; text-align: center;">
   <img
-    src="{{ '/assets/images/software/rivermuse/rivermuse_model.png' | relative_url }}"
+    src="{{ '/assets/images/software/rivermuse/rivermuse_model.PNG' | relative_url }}"
     alt="rivermuse model"
     loading="lazy"
     style="display: block; margin: 0 auto; max-width: 900px; width: 95%; height: auto;"
@@ -262,4 +262,3 @@ satval samples multispectral satellite pixel features aligned in space and time 
 </figure>
 
 ---
-
