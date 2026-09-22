@@ -124,7 +124,7 @@ RivGraph is a Python package that extracts river and delta channel network topol
   <img src="{{ '/assets/images/software/rabpro/rabpro_logo.png' | relative_url }}"
        alt="rabpro"
        loading="lazy"
-       style="height:78px; width:250px; max-width:100%; display:block;" />
+       style="width:350px; max-width:100%; height:auto; display:block;" />
 </h2>
 
 rabpro (River and Basin Profiler) delineates watershed basins and computes river profiles, slopes, and related longitudinal metrics at global scale. It can also compute contributing-basin statistics for arbitrary raster inputs (e.g., topography, precipitation, vegetation) via Google Earth Engine, providing a flexible bridge between user-defined locations and basin-scale context.
@@ -149,7 +149,7 @@ rabpro (River and Basin Profiler) delineates watershed basins and computes river
 ---
 
 <a id="rivmap"></a>
-## RivMAP
+<h2 class="visually-hidden">RivMAP</h2>
 
 <img
   src="{{ '/assets/images/software/rivmap/rivmap.PNG' | relative_url }}"
