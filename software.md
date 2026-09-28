@@ -1,267 +1,319 @@
 ---
-layout: page
+layout: software
 title: Software
 permalink: /software/
 ---
 
-I build and maintain research software that includes new algorithms, modeling frameworks, and reproducible pipelines. Some projects develop novel methods (RivGraph, VotE), some are end-to-end modeling efforts (e.g., DeepReservoir for RL-based reservoir operations and Pydro for differentiable runoff + routing); some are data-wranglers (dapper, satval, hillsloper). Across all of them, I turn messy, "big", multi-source environmental data into analysis-ready products and model-ready inputs. I’m big on reproducibility and automation—especially when it lets us ask new questions and see the world like we never have before.
+<div class="software-portfolio">
+  <div class="software-intro">
+    <p>I build research software that turns complex environmental data into usable models, methods, and analysis-ready products. The work ranges from new river-network algorithms and data platforms to end-to-end hydrologic modeling frameworks.</p>
+    <p>Most projects are geospatial, reproducible, and automation-heavy. Except for Pydro, I have been the primary developer of each project shown here, with ideas, knowledge, and code contributed by many friends and collaborators.</p>
+  </div>
 
-I began coding during my PhD studies with Matlab, and later picked up Python when I started my postdoc. This is also when I found my passion for creating software through the development of RivGraph. Since then, I've branched into other languages and richer Python. Almost all of my packages have a geospatial component, and I frequently integrate Google Earth Engine. With the exception of `Pydro`, I was the primary developer for each package listed here, but many friends and collaborators have contributed ideas, knowledge, and code.
+  <section class="software-section" aria-labelledby="featured-software-heading">
+    <h2 class="software-section__heading" id="featured-software-heading"><span>Featured software</span></h2>
+    <p class="software-section__intro">Three projects that best represent the range of my current work: decision-making with AI, river-network algorithms, and global-scale data fusion.</p>
 
-<div class="toc-pills">
-  <a class="toc-pill" href="#deepreservoir">DeepReservoir</a>
-  <a class="toc-pill" href="#pydro">Pydro</a>
-  <a class="toc-pill" href="#vote">VotE (Veins of the Earth)</a>
-  <a class="toc-pill" href="#dapper">dapper</a>
-  <a class="toc-pill" href="#rivgraph">RivGraph</a>
-  <a class="toc-pill" href="#rabpro">rabpro</a>
-  <a class="toc-pill" href="#rivmap">RivMAP</a>
-  <a class="toc-pill" href="#hillsloper">hillsloper</a>
-  <a class="toc-pill" href="#satval">satval</a>
-  <a class="toc-pill" href="#ecopopper">Ecopopper</a>
-  <a class="toc-pill" href="#rivermuse">RiverMUSE</a>
+    <div class="software-feature-grid">
+      <article class="software-feature software-feature--lead" id="deepreservoir">
+        <div class="software-feature__media software-feature__media--deepreservoir" aria-hidden="true">
+          <img src="{{ '/assets/images/index/human_impacts_banner2.png' | relative_url }}" alt="" />
+          <span class="software-feature__eyebrow">Reservoir operations + reinforcement learning</span>
+        </div>
+        <div class="software-feature__content">
+          <p class="software-status">In active development · Repository coming soon</p>
+          <h3 id="deepreservoir-title">DeepReservoir-Navajo</h3>
+          <p class="software-feature__summary">A deep reinforcement learning framework for optimizing reservoir operations in a virtual hydropower-reservoir environment. Scenario-driven rules, constraints, and objectives make it possible to test alternative operational strategies quickly.</p>
+          <ul class="software-meta" aria-label="DeepReservoir-Navajo technologies">
+            <li>Python</li>
+            <li>stable-baselines3</li>
+            <li>Simulation environments</li>
+          </ul>
+          <div class="software-links">
+            <span class="software-link--pending" aria-label="GitHub repository coming soon">GitHub — coming soon</span>
+            <a href="{{ '/contact/' | relative_url }}">Contact</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="software-feature" id="rivgraph">
+        <div class="software-feature__media software-feature__media--contain">
+          <img src="{{ '/assets/images/software/rivgraph/rivgraph_directionality.png' | relative_url }}" alt="A river channel network with automatically assigned flow directions" loading="lazy" />
+        </div>
+        <div class="software-feature__content">
+          <p class="software-status">Open source · Published</p>
+          <h3 id="rivgraph-title">RivGraph</h3>
+          <p class="software-feature__summary">Extracts river and delta channel-network topology from georeferenced masks, assigns link directionality, and computes reproducible topologic and morphologic metrics.</p>
+          <ul class="software-meta" aria-label="RivGraph technologies">
+            <li>Python</li>
+            <li>Image processing</li>
+            <li>Graph analysis</li>
+          </ul>
+          <div class="software-links">
+            <a href="https://github.com/VeinsOfTheEarth/RivGraph">GitHub</a>
+            <a href="https://doi.org/10.21105/joss.02952">JOSS</a>
+            <a href="https://www.earth-surf-dynam.net/8/87/2020/esurf-8-87-2020.html">Methods paper</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="software-feature" id="vote">
+        <div class="software-feature__media software-feature__media--contain software-feature__media--vote">
+          <img src="{{ '/assets/images/software/vote/VotE.png' | relative_url }}" alt="VotE, Veins of the Earth" loading="lazy" />
+        </div>
+        <div class="software-feature__content">
+          <p class="software-status">Research platform · Source release planned</p>
+          <h3 id="vote-title">VotE <span>(Veins of the Earth)</span></h3>
+          <p class="software-feature__summary">A river-centric data platform and API for rapidly querying, modeling, and visualizing data across global river networks.</p>
+          <ul class="software-meta" aria-label="VotE technologies">
+            <li>Python + SQL</li>
+            <li>PostgreSQL / PostGIS</li>
+            <li>Geospatial data fusion</li>
+          </ul>
+          <div class="software-links">
+            <a href="https://www.authorea.com/doi/full/10.1002/essoar.10509913.2">Poster</a>
+            <a href="{{ '/contact/' | relative_url }}">Contact</a>
+          </div>
+          <details class="software-details software-details--feature">
+            <summary>About VotE <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg></summary>
+            <div class="software-details__body">
+              <p>VotE is a first step toward fusing global hydrologic data into a common, AI-ready platform—something in the direction of a hydrologic digital twin. Its schema and workflows bring hydrography, dams, and river attributes into one consistent, queryable system.</p>
+              <p>The source currently includes build scripts and the API, but not the data or database. It is being prepared for a public release.</p>
+            </div>
+          </details>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="software-section software-section--more" aria-labelledby="more-software-heading">
+    <h2 class="software-section__heading" id="more-software-heading"><span>More software</span></h2>
+    <p class="software-section__intro">Focused tools and modeling efforts. Open a card for a workflow figure or additional context.</p>
+
+    <div class="software-card-grid">
+      <article class="software-card" id="rabpro">
+        <div class="software-card__top">
+          <div class="software-card__media software-card__media--wide-logo">
+            <img src="{{ '/assets/images/software/rabpro/rabpro_logo.png' | relative_url }}" alt="rabpro, river and basin profiler" loading="lazy" />
+          </div>
+          <div class="software-card__copy">
+            <p class="software-status">Open source · Published</p>
+            <h3 id="rabpro-title">rabpro</h3>
+            <p>Delineates watershed basins and computes river profiles, slopes, and contributing-basin statistics at global scale.</p>
+            <ul class="software-meta" aria-label="rabpro technologies">
+              <li>Python</li>
+              <li>Google Earth Engine</li>
+              <li>Raster statistics</li>
+            </ul>
+            <div class="software-links">
+              <a href="https://github.com/VeinsOfTheEarth/rabpro">GitHub</a>
+              <a href="https://doi.org/10.21105/joss.04237">JOSS</a>
+            </div>
+          </div>
+        </div>
+        <details class="software-details">
+          <summary>Workflow example <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg></summary>
+          <div class="software-details__body">
+            <p>rabpro connects user-defined locations to basin-scale context and can compute statistics for arbitrary raster inputs such as topography, precipitation, and vegetation through Google Earth Engine.</p>
+            <figure>
+              <img src="{{ '/assets/images/software/rabpro/rabpro_workflow.PNG' | relative_url }}" alt="rabpro basin delineation and zonal statistics workflow" loading="lazy" />
+              <figcaption>rabpro automates basin delineation and zonal statistics using Google Earth Engine.</figcaption>
+            </figure>
+          </div>
+        </details>
+      </article>
+
+      <article class="software-card" id="dapper">
+        <div class="software-card__top">
+          <div class="software-card__media software-card__media--wide-logo">
+            <img src="{{ '/assets/images/software/dapper/dapper_logo_2.jpg' | relative_url }}" alt="dapper" loading="lazy" />
+          </div>
+          <div class="software-card__copy">
+            <p class="software-status">Open source</p>
+            <h3 id="dapper-title">dapper</h3>
+            <p>Curates, samples, and formats the datasets needed to run DOE’s E3SM Land Model across flexible grid-cell definitions.</p>
+            <ul class="software-meta" aria-label="dapper technologies">
+              <li>Python</li>
+              <li>Google Earth Engine</li>
+              <li>netCDF / xarray</li>
+            </ul>
+            <div class="software-links">
+              <a href="https://github.com/lanl/dapper">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <details class="software-details">
+          <summary>What it automates <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg></summary>
+          <div class="software-details__body">
+            <p>dapper (Data PreParation for ELM Runs) automates meteorological forcings, parameters, and related inputs. It leans on Google Earth Engine and other APIs to make sampling scalable for polygons such as watersheds as well as rectangular grids.</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="software-card" id="rivmap">
+        <div class="software-card__top">
+          <div class="software-card__media software-card__media--wide-logo">
+            <img src="{{ '/assets/images/software/rivmap/rivmap_logo.png' | relative_url }}" alt="RivMAP, River Morphodynamics from Analysis of Planforms" loading="lazy" />
+          </div>
+          <div class="software-card__copy">
+            <h3 class="visually-hidden" id="rivmap-title">RivMAP</h3>
+            <p class="software-status">Open source · Published</p>
+            <p>A Matlab toolbox for extracting planform river morphodynamics from binary channel masks, including widths, migration rates, and cutoff events.</p>
+            <ul class="software-meta" aria-label="RivMAP technologies">
+              <li>Matlab</li>
+              <li>Image processing</li>
+              <li>Landsat workflows</li>
+            </ul>
+            <div class="software-links">
+              <a href="https://github.com/VeinsOfTheEarth/RivMAP">GitHub</a>
+              <a href="https://doi.org/10.1002/2016EA000196">Paper</a>
+            </div>
+          </div>
+        </div>
+        <details class="software-details">
+          <summary>Example outputs <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg></summary>
+          <div class="software-details__body">
+            <figure>
+              <img class="software-details__image--tall" src="{{ '/assets/images/software/rivmap/rivmap.PNG' | relative_url }}" alt="RivMAP centerline, bankline, width, migration, and cutoff outputs" loading="lazy" />
+            </figure>
+          </div>
+        </details>
+      </article>
+
+      <article class="software-card" id="ecopopper">
+        <div class="software-card__top">
+          <div class="software-card__media software-card__media--figure">
+            <img src="{{ '/assets/images/software/ecopop/ecopop_toronto.png' | relative_url }}" alt="Ecopop units around Toronto" loading="lazy" />
+          </div>
+          <div class="software-card__copy">
+            <p class="software-status">Open source · R&amp;D 100–recognized team effort</p>
+            <h3 id="ecopopper-title">Ecopopper</h3>
+            <p>Generates flexible “ecopop units” that bridge scale mismatches between Earth System Model grids and local ecological or population models.</p>
+            <ul class="software-meta" aria-label="Ecopopper technologies">
+              <li>Python</li>
+              <li>Spatial clustering</li>
+              <li>Scale bridging</li>
+            </ul>
+            <div class="software-links">
+              <a href="https://github.com/lanl/ecopop">GitHub</a>
+              <a href="https://www.lanl.gov/media/news/0911-rd100-awards">Award</a>
+            </div>
+          </div>
+        </div>
+        <details class="software-details">
+          <summary>Example application <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg></summary>
+          <div class="software-details__body">
+            <p>The units shown for metropolitan Toronto provide higher resolution where either human density or mosquito-habitat potential is high. Ecopopper contributed to a larger LANL team effort that received two 2025 R&amp;D 100 Awards.</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="software-card" id="pydro">
+        <div class="software-card__top software-card__top--text">
+          <div class="software-card__copy">
+            <p class="software-status">In development · Available by request</p>
+            <h3 id="pydro-title">Pydro</h3>
+            <p>A differentiable runoff-and-routing modeling effort for hybrid physics/AI learning, designed to remain trainable end to end while retaining physically meaningful structure.</p>
+            <ul class="software-meta" aria-label="Pydro technologies">
+              <li>Python</li>
+              <li>Differentiable modeling</li>
+              <li>Hydrology</li>
+            </ul>
+            <div class="software-links">
+              <a href="{{ '/contact/' | relative_url }}">Contact</a>
+            </div>
+          </div>
+        </div>
+        <details class="software-details">
+          <summary>Current work <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg></summary>
+          <div class="software-details__body">
+            <p>Work to date includes development of an unreleased global wildfire-hydrology dataset for training and validation.</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="software-card" id="hillsloper">
+        <div class="software-card__top">
+          <div class="software-card__media software-card__media--figure">
+            <img src="{{ '/assets/images/software/hillsloper/hillsloper.png' | relative_url }}" alt="Hillsloper terrain partition example" loading="lazy" />
+          </div>
+          <div class="software-card__copy">
+            <p class="software-status">Available by request</p>
+            <h3 id="hillsloper-title">hillsloper</h3>
+            <p>Partitions digital elevation models into connected hillslopes for high-resolution terrestrial simulations while preserving hillslope-channel connectivity.</p>
+            <ul class="software-meta" aria-label="hillsloper technologies">
+              <li>Python</li>
+              <li>DEM analysis</li>
+              <li>Hydrologic connectivity</li>
+            </ul>
+            <div class="software-links">
+              <a href="{{ '/contact/' | relative_url }}">Contact</a>
+            </div>
+          </div>
+        </div>
+        <details class="software-details">
+          <summary>Modeling context <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg></summary>
+          <div class="software-details__body">
+            <p>hillsloper creates vector-based terrain representations and characterizations suitable for the Advanced Terrestrial Simulator (ATS).</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="software-card" id="satval">
+        <div class="software-card__top">
+          <div class="software-card__media software-card__media--figure">
+            <img src="{{ '/assets/images/software/satval/satval.png' | relative_url }}" alt="Satellite and water-quality observation alignment" loading="lazy" />
+          </div>
+          <div class="software-card__copy">
+            <p class="software-status">Available by request · Published</p>
+            <h3 id="satval-title">satval</h3>
+            <p>Matches multispectral satellite pixels with in-situ water-quality observations in space and time to build analysis-ready validation datasets.</p>
+            <ul class="software-meta" aria-label="satval technologies">
+              <li>Python</li>
+              <li>Google Earth Engine</li>
+              <li>Remote sensing</li>
+            </ul>
+            <div class="software-links">
+              <a href="https://www.spiedigitallibrary.org/journals/journal-of-applied-remote-sensing/volume-16/issue-4/044528/Geographically-aware-estimates-of-remotely-sensed-water-properties-for-Chesapeake/10.1117/1.JRS.16.044528.short">Paper</a>
+              <a href="{{ '/contact/' | relative_url }}">Contact</a>
+            </div>
+          </div>
+        </div>
+        <details class="software-details">
+          <summary>Example application <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg></summary>
+          <div class="software-details__body">
+            <p>More than 50 million Chesapeake Bay water-quality observations were aligned in space and time with MODIS pixels in the cloud to create a statistical model.</p>
+          </div>
+        </details>
+      </article>
+
+      <article class="software-card" id="rivermuse">
+        <div class="software-card__top">
+          <div class="software-card__media software-card__media--figure">
+            <img src="{{ '/assets/images/software/rivermuse/rivermuse_model.PNG' | relative_url }}" alt="RiverMUSE population-dynamics model" loading="lazy" />
+          </div>
+          <div class="software-card__copy">
+            <p class="software-status">Model available · Published</p>
+            <h3 id="rivermuse-title">RiverMUSE</h3>
+            <p>Simulates freshwater mussel population dynamics under changing suspended-sediment and flow regimes at reach scale.</p>
+            <ul class="software-meta" aria-label="RiverMUSE technologies">
+              <li>Matlab</li>
+              <li>Ecohydrology</li>
+              <li>Scenario simulation</li>
+            </ul>
+            <div class="software-links">
+              <a href="https://csdms.colorado.edu/wiki/Model:RiverMUSE">CSDMS</a>
+              <a href="https://www.journals.uchicago.edu/doi/full/10.1086/684223">Paper</a>
+            </div>
+          </div>
+        </div>
+        <details class="software-details">
+          <summary>Model context <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" /></svg></summary>
+          <div class="software-details__body">
+            <p>The model was a collaboration among coauthors; I implemented it in code. A relatively simple interaction model produced rich dynamics and remained tractable for formal nonlinear-dynamics analysis.</p>
+          </div>
+        </details>
+      </article>
+    </div>
+  </section>
 </div>
-
----
-
-<a id="deepreservoir"></a>
-## DeepReservoir
-<p style="margin-top:-1.3rem;"><em>(under development)</em></p>
-
-DeepReservoir is a deep reinforcement learning framework for optimizing reservoir operations in a virtual hydropower-reservoir environment. It supports building scenario-driven environments (rules, constraints, objectives) and training policies with modern RL libraries, enabling rapid experimentation with alternative operational strategies.
-
-- **Repository:** actively being developed; currently private. Contact me if interested.  
-- **Tech:** deep reinforcement learning (stable-baselines3), simulation environments
-- **Language(s):** Python
-
----
-
-<a id="pydro"></a>
-## Pydro 
-<p style="margin-top:-1.3rem;"><em>(under development)</em></p>
-
-Pydro is a differentiable runoff + routing modeling effort designed for hybrid physics/AI learning. The goal is to make hydrologic modeling components trainable end-to-end, while still retaining physically meaningful structure. Work to date includes development of a global wildfire–hydrology dataset (unreleased) for training and validation.
-
-- **Repo:** email me  
-- **Tech:** differentiable modeling
-- **Language(s):** Python
-
----
-
-<a id="vote"></a>
-## VotE (Veins of the Earth)
-
-<img
-  src="{{ '/assets/images/software/vote/VotE.png' | relative_url }}"
-  alt="VotE (Veins of the Earth) logo"
-  loading="lazy"
-  style="float:right; width:320px; max-width:45%; height:auto; margin:0 0 1rem 1rem;"
-/>
-
-
-It's hard to fully explain what VotE is. One on hand, it's just a database with a user-friendly API. On the other, it's a first-cut towards an ambitious vision to fuse global hydrologic data into a common, AI-ready platform that's in the direction of a "digital twin" (or "Hydrotwin" as I've pitched the idea a few times). It's given us a glimpse into the power of data fusion, the opportunities that still remain, and the ways it can let us re-imagine the questions we can ask about the Hydrosphere.
-
-More concretely, VotE is a river-centric data platform and API for rapid querying, model building, and visualization across global river networks. It is designed around an AI-ready geospatial schema and workflows for integrating river-network–based datasets (e.g., hydrography, dams, attributes) into a consistent, queryable system for analysis and data-driven modeling.
-
-The repository itself includes scripts to build VotE as well as the API (but not the data + database itself). It's somewhat messy; we are slowly bringing it toward something publicly releasable. Reach out if you're keen to see it!
-
-- **Repo:** email me  
-- **Tech:** PostgreSQL, PostGIS, geospatial data modeling, data fusion techniques
-- **Pubs:** [Poster](https://www.authorea.com/doi/full/10.1002/essoar.10509913.2)
-- **Language(s):** Python; SQL
-
----
-
-<a id="dapper"></a>
-<h2 class="software-logo-header" style="margin: 0.5rem 0 0.75rem 0;">
-  <img src="{{ '/assets/images/software/dapper/dapper_logo_2.jpg' | relative_url }}"
-       alt="dapper"
-       loading="lazy"
-       style="width:350px; max-width:100%; display:block;" />
-</h2>
-
-dapper (Data PreParation for ELM Runs) is a toolset for curating, sampling, and formatting the datasets needed to run DOE’s E3SM Land Model (ELM). It automates end-to-end data preparation workflows (meteorological forcings, parameters, and related inputs), leaning on Google Earth Engine and other APIs to make sampling fast, scalable, and flexible for different grid-cell definitions (e.g., polygons like watersheds rather than rectangular grids).
-
-- **Repo:** [GitHub](https://github.com/lanl/dapper)  
-- **Tech:** Google Earth Engine (GEE), netCDF/xarray-style workflows, geospatial sampling
-- **Language(s):** Python
-
----
-
-<a id="rivgraph"></a>
-<h2 class="software-logo-header" style="margin: 0.5rem 0 0.75rem 0;">
-  <img src="{{ '/assets/images/software/rivgraph/rg_logo_full.png' | relative_url }}"
-       alt="RivGraph"
-       loading="lazy"
-       style="height:100px; width:350px; max-width:100%; display:block;" />
-</h2>
-
-RivGraph is a Python package that extracts river and delta channel network topology (nodes/links) from georeferenced binary mask rasters. It automatically assigns link directionality and computes a range of topologic and morphologic network metrics, supporting reproducible studies of braided rivers and deltas.
-
-- **Repo:** [GitHub](https://github.com/VeinsOfTheEarth/RivGraph)  
-- **Pubs:** [JOSS](https://doi.org/10.21105/joss.02952) · [ESurf Dynamics](https://www.earth-surf-dynam.net/8/87/2020/esurf-8-87-2020.html)
-- **Tech:** image processing, graph analysis, geospatial I/O
-- **Language(s):** Python
-
-<div style="clear: both;"></div>
-
-<figure style="clear: both; margin: 1.25rem auto; text-align: center;">
-  <img
-    src="{{ '/assets/images/software/rivgraph/rivgraph_directionality.png' | relative_url }}"
-    alt="RivGraph example output"
-    loading="lazy"
-    style="display: block; margin: 0 auto; max-width: 900px; width: 95%; height: auto;"
-  />
-  <figcaption style="margin-top: 0.5rem;">
-    <em>One of the novelties of RivGraph is that it can automatically set flow directions in its extracted channel networks.</em>
-  </figcaption>
-</figure>
-
----
-
-<a id="rabpro"></a>
-<h2 class="software-logo-header" style="margin: 0.5rem 0 0.75rem 0;">
-  <img src="{{ '/assets/images/software/rabpro/rabpro_logo.png' | relative_url }}"
-       alt="rabpro"
-       loading="lazy"
-       style="width:350px; max-width:100%; height:auto; display:block;" />
-</h2>
-
-rabpro (River and Basin Profiler) delineates watershed basins and computes river profiles, slopes, and related longitudinal metrics at global scale. It can also compute contributing-basin statistics for arbitrary raster inputs (e.g., topography, precipitation, vegetation) via Google Earth Engine, providing a flexible bridge between user-defined locations and basin-scale context.
-
-- **Repo:** [GitHub](https://github.com/VeinsOfTheEarth/rabpro)  
-- **Pubs:** [JOSS](https://doi.org/10.21105/joss.04237)
-- **Tech:** Google Earth Engine (GEE), watershed delineation, raster statistics
-- **Language(s):** Python
-
-<figure style="clear: both; margin: 1.25rem auto; text-align: center;">
-  <img
-    src="{{ '/assets/images/software/rabpro/rabpro_workflow.PNG' | relative_url }}"
-    alt="rabpro workflow"
-    loading="lazy"
-    style="display: block; margin: 0 auto; max-width: 900px; width: 95%; height: auto;"
-  />
-  <figcaption style="margin-top: 0.5rem;">
-    <em>Among other things, rabpro automates zonal statistics using GEE's API.</em>
-  </figcaption>
-</figure>
-
----
-
-<a id="rivmap"></a>
-<h2 class="visually-hidden">RivMAP</h2>
-
-<img
-  src="{{ '/assets/images/software/rivmap/rivmap.PNG' | relative_url }}"
-  alt="RivMAP functionality"
-  loading="lazy"
-  style="float:left; width:360px; max-width:45%; height:auto; margin:0 1.25rem 1rem 0;"
-/>
-
-RivMAP (River Morphodynamics from Analysis of Planforms) is a Matlab toolbox for extracting planform river morphodynamics from binary channel masks. It quantifies centerlines and banklines, width, migration rates, and cutoff events, and was built to support large-scale Landsat-based mapping of river planform change.
-
-- **Repo:** [GitHub](https://github.com/VeinsOfTheEarth/RivMAP)
-- **Pubs:** [Earth and Space Science](https://doi.org/10.1002/2016EA000196)
-- **Tech:** river planform analysis, image processing, Landsat workflows
-- **Language(s):** Matlab
-
-<div style="clear: both;"></div>
-
----
-
-<a id="ecopopper"></a>
-## Ecopopper
-
-Ecopopper generates flexible, unstructured “ecopop units” to help bridge scale mismatches between Earth System Model grids and local ecological / population dynamics models. It supports coupling workflows and scenario experiments that need spatial units more meaningful than coarse model grid cells.
-
-Ecopopper was part of a large LANL team's effort that resulted in two [R&D100 Awards](https://www.lanl.gov/media/news/0911-rd100-awards) in 2025.
-
-- **Repo:** [GitHub](https://github.com/lanl/ecopop) 
-- **Tech:** spatial clustering/typologies, scale-bridging units, ecology/hydrology
-- **Language(s):** Python
-
-<figure style="clear: both; margin: 1.25rem auto; text-align: center;">
-  <img
-    src="{{ '/assets/images/software/ecopop/ecopop_toronto.png' | relative_url }}"
-    alt="Ecopopper example output"
-    loading="lazy"
-    style="display: block; margin: 0 auto; max-width: 900px; width: 95%; height: auto;"
-  />
-  <figcaption style="margin-top: 0.5rem;">
-    <em>Ecopop units were used to study mosquito-borne diseases over the Toronto Metro area (and continentally). These were designed to provide higher resolution over areas of either high human density or high mosquito habitat potential. (The first version of these units were called "Hydropop.").</em>
-  </figcaption>
-</figure>
-
----
-
-<a id="rivermuse"></a>
-## RiverMUSE
-
-RiverMUSE simulates freshwater mussel population dynamics under changing suspended sediment and flow regimes, supporting scenario experiments that connect hydrology/sediment forcing to ecological response at reach scale. The model itself was a collaboration among coauthors; I merely coded it.
-
-- **Repo:** [CSDMS](https://csdms.colorado.edu/wiki/Model:RiverMUSE) 
-- **Pubs:** [Freshwater Science](https://www.journals.uchicago.edu/doi/full/10.1086/684223)
-- **Tech:** ecohydrology, scenario simulation
-- **Language(s):** Matlab
-
-<figure style="clear: both; margin: 1.25rem auto; text-align: center;">
-  <img
-    src="{{ '/assets/images/software/rivermuse/rivermuse_model.PNG' | relative_url }}"
-    alt="rivermuse model"
-    loading="lazy"
-    style="display: block; margin: 0 auto; max-width: 900px; width: 95%; height: auto;"
-  />
-  <figcaption style="margin-top: 0.5rem;">
-    <em>A fairly simple interaction model resulted in rich dynamics, and its relative simplicity allowed for formal nonlinear dynamics analysis.</em>
-  </figcaption>
-</figure>
-
----
-
-<a id="hillsloper"></a>
-## hillsloper
-
-hillsloper partitions DEMs into constituent hillslopes for high-resolution terrestrial simulations. It extracts a connected river network and maintains hillslope–channel connectivity, making it easier to build modeling domains that respect drainage structure and terrain controls.
-
-- **Repo:** available upon request  
-- **Tech:** DEM analysis, terrain partitioning, hydrologic connectivity
-- **Language(s):** Python
-
-<figure style="clear: both; margin: 1.25rem auto; text-align: center;">
-  <img
-    src="{{ '/assets/images/software/hillsloper/hillsloper.png' | relative_url }}"
-    alt="Hillsloper example output"
-    loading="lazy"
-    style="display: block; margin: 0 auto; max-width: 900px; width: 95%; height: auto;"
-  />
-  <figcaption style="margin-top: 0.5rem;">
-    <em>Hillsloper breaks DEMs into vector-based representations and characterizations amenable for use with ATS (Advanced Terrestrial Simulator).</em>
-  </figcaption>
-</figure>
-
-
----
-
-<a id="satval"></a>
-## satval
-
-satval samples multispectral satellite pixel features aligned in space and time with in-situ water-quality observations. It supports satellite–field validation and modeling by aggregating observations within shared pixel footprints and assembling analysis-ready matched datasets.
-
-- **Repo:** available upon request  
-- **Tech:** Google Earth Engine (GEE), remote sensing validation, water quality
-- **Pubs:** [Journal of Applied Remote Sensing](https://www.spiedigitallibrary.org/journals/journal-of-applied-remote-sensing/volume-16/issue-4/044528/Geographically-aware-estimates-of-remotely-sensed-water-properties-for-Chesapeake/10.1117/1.JRS.16.044528.short)
-- **Language(s):** Python
-
-<figure style="clear: both; margin: 1.25rem auto; text-align: center;">
-  <img
-    src="{{ '/assets/images/software/satval/satval.png' | relative_url }}"
-    alt="satval example output"
-    loading="lazy"
-    style="display: block; margin: 0 auto; max-width: 900px; width: 95%; height: auto;"
-  />
-  <figcaption style="margin-top: 0.5rem;">
-    <em>Over 50 million water quality observations across the Chesapeake Bay were aligned in space/time with MODIS pixels to create a statistical model, all in "the cloud."</em>
-  </figcaption>
-</figure>
-
----
