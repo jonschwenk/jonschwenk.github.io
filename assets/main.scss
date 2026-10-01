@@ -365,7 +365,17 @@ body {
 }
 
 .software-feature__media--rivgraph {
-  background: #0b1018;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.software-feature__media--rivgraph svg {
+  display: block;
+  height: calc(100% - 1rem);
+  width: auto;
+  max-width: calc(100% - 2rem);
 }
 
 .software-feature__media--vote {
