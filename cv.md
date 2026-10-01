@@ -5,7 +5,7 @@ permalink: /cv/
 ---
 
 <div class="toc-pills">
-  <a class="toc-pill" href="{{ '/assets/cv/schwenk_cv_full.pdf' | relative_url }}">Download CV (PDF)</a>
+  <a class="toc-pill" href="{{ '/assets/cv/schwenk_cv.html' | relative_url }}">View CV (HTML)</a>
   <a class="toc-pill" href="https://scholar.google.com/citations?user=qHp30JkAAAAJ&hl=en&oi=ao">Google Scholar</a>
 </div>
 

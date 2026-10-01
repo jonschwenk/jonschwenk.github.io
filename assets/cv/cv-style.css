@@ -1,0 +1,154 @@
+/* Jon Schwenk CV — "Quiet serif" design.
+   All text lives in schwenk_cv.html; this file only controls appearance.
+   Body face: TeX Gyre Pagella (a free Palatino), bundled in fonts/ so the CV looks the same everywhere. */
+
+@font-face { font-family: "Pagella CV"; src: url("fonts/Pagella-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; }
+@font-face { font-family: "Pagella CV"; src: url("fonts/Pagella-Italic.ttf") format("truetype"); font-weight: 400; font-style: italic; }
+@font-face { font-family: "Pagella CV"; src: url("fonts/Pagella-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; }
+@font-face { font-family: "Pagella CV"; src: url("fonts/Pagella-BoldItalic.ttf") format("truetype"); font-weight: 700; font-style: italic; }
+
+:root {
+  --font: "Pagella CV", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --size: 10.5pt;        /* body text */
+  --leading: 1.27;
+  --ink: #1b1b1b;
+  --muted: #666;
+  --faint: #8f8f8f;
+  --rule: #c9ccd0;
+  --accent: #1d4d6e;     /* the one accent: headings, links, tags */
+  --date-col: 1in;       /* right-hand date column */
+  --indent: .22in;       /* hanging indent for citations and lists */
+  --bullet: .17in;       /* bullet-to-text distance for sub-points */
+  --gap: 3.5pt;          /* space between entries */
+}
+
+/* ---------- Page and screen ---------- */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #e9e8e4; color: var(--ink); }
+.screen-bar { max-width: 8.5in; margin: 20px auto 0; padding: 0 16px; text-align: right; }
+.screen-bar button { font: 13px/1 Arial, sans-serif; padding: 9px 14px; border: 0; border-radius: 4px; background: #252c30; color: #fff; cursor: pointer; }
+.cv { width: 8.5in; max-width: calc(100% - 32px); margin: 12px auto 40px; padding: .8in 1in .75in; background: #fff;
+      box-shadow: 0 1px 3px #0000001a, 0 8px 24px #00000010;
+      font-family: var(--font); font-size: var(--size); line-height: var(--leading); font-weight: 400;
+      font-variant-numeric: lining-nums; font-kerning: normal; text-rendering: optimizeLegibility; }
+.cv p { margin: 0; }
+.cv strong { font-weight: 700; }
+.cv sup, .cv sub { font-size: .75em; line-height: 0; }
+.cv a { color: var(--accent); text-decoration: none; overflow-wrap: anywhere; }
+@media screen { .cv a:hover { text-decoration: underline; } }
+
+/* ---------- Header ---------- */
+.cv-header { margin-bottom: 2pt; }
+.cv h1 { margin: 0 0 1pt; font-size: 25pt; font-weight: 400; letter-spacing: .09em; line-height: 1.05; color: var(--ink); }
+.identity { display: flex; flex-wrap: wrap; align-items: baseline; margin: 0 0 3pt; }
+.identity p { font-size: 10.5pt; line-height: 1.3; letter-spacing: .02em; }
+.identity p:first-child { font-size: 11.5pt; letter-spacing: .08em; font-variant-caps: all-small-caps; font-variant-numeric: oldstyle-nums; }
+.identity p + p::before { content: "·"; margin: 0 .5em; color: var(--muted); }
+.identity em { font-style: normal; }
+.identity br { display: none; }
+.contact { display: flex; flex-wrap: wrap; font-size: 9.25pt; line-height: 1.3; color: var(--muted); letter-spacing: .01em; }
+.contact span { white-space: nowrap; }
+.contact a { color: inherit; }   /* header links stay muted like the rest of the contact line */
+.contact span + span::before { content: "·"; margin: 0 .55em; color: #a5a5a5; }
+
+/* ---------- Section headings: spaced small caps over a hairline ---------- */
+.cv h2 { margin: 14pt 0 6pt; padding-bottom: 2pt; border-bottom: .6pt solid var(--rule);
+         font-size: 14pt; font-weight: 400; line-height: 1.2; letter-spacing: .11em; color: var(--accent);
+         font-variant-caps: all-small-caps; }
+.cv h2 .amp { font-style: italic; font-variant-caps: normal; font-size: .82em; letter-spacing: 0; }
+.cv-header + section h2 { margin-top: 13pt; }
+.cv h3 { margin: 0; font-size: 1em; font-weight: 700; line-height: var(--leading); }
+.cv section { scroll-margin-top: 20px; }
+
+/* ---------- Dated rows: text left, date right ---------- */
+.dated { display: grid; grid-template-columns: minmax(0, 1fr) var(--date-col); column-gap: 12pt; align-items: baseline; }
+.date { text-align: right; color: var(--muted); font-variant-numeric: tabular-nums lining-nums; }
+.date strong { font-weight: inherit; }
+.appointment .date, .education-row .date { color: var(--ink); }
+.date-status { font-style: italic; }
+
+/* ---------- Education and appointments ---------- */
+.education-group { margin-bottom: 8pt; }
+.education-group:last-child { margin-bottom: 0; }
+.education-institution { display: flex; flex-wrap: wrap; align-items: baseline; }
+.education-institution p:first-child { font-weight: 700; }
+.education-institution p + p { font-style: italic; font-size: .92em; color: var(--muted); }
+.education-institution p + p::before { content: "·"; font-style: normal; margin: 0 .5em; color: #a5a5a5; }
+.education-row { margin-top: 1pt; }
+.appointment { margin: 9pt 0 3pt; }
+section > .appointment:first-of-type, .leadership-group:first-of-type .appointment { margin-top: 0; }
+.role { font-style: italic; }
+.cv .subheading { margin: 7pt 0 4pt; font-size: 1em; font-weight: 400; font-style: italic; color: var(--muted); }
+.leadership-group { margin-bottom: 8pt; }
+
+/* ---------- Bulleted sub-points (research topics, software, teaching, leadership) ---------- */
+.bullet-entry { display: grid; grid-template-columns: var(--bullet) minmax(0, 1fr); align-items: start; }
+.bullet-marker { display: block; width: 3.5px; height: 3.5px; margin-top: calc(var(--size) * .48); border-radius: 50%;
+                 background: var(--faint); font-size: 0; line-height: 0; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+.entry, .record { margin-bottom: var(--gap); }
+
+/* ---------- Unbulleted lists: hanging indent ---------- */
+.citation, .entry.citation, .entry.skill, .presentation { padding-left: var(--indent); text-indent: calc(-1 * var(--indent)); }
+.entry.funding .dated > div:first-child, .entry.listed .dated > div:first-child { padding-left: var(--indent); text-indent: calc(-1 * var(--indent)); }
+.citation { margin-bottom: 3.5pt; }
+.entry.listed { margin-bottom: 2.5pt; }
+.fund-role { text-transform: uppercase; font-size: .84em; letter-spacing: .06em; }
+.amount { white-space: nowrap; }
+
+/* Small-caps tags: pending, invited, contributor */
+.tag { font-variant-caps: all-small-caps; letter-spacing: .06em; color: var(--accent); font-size: 1.02em; white-space: nowrap; }
+.presentation .tag { margin-left: .2em; }
+
+#honors-and-awards .dated { grid-template-columns: minmax(0, 1fr) 1.45in; }
+
+/* ---------- Software ---------- */
+.software { margin-bottom: 5pt; }
+.software-title { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; column-gap: 12pt; margin-bottom: 1.5pt; }
+.sw-name { font-weight: 700; }
+.sw-slash { margin: 0 .2em; color: var(--muted); }
+.sw-name + .tag { margin-left: .1em; }
+.sw-lang { font-style: italic; color: var(--muted); margin-left: .25em; }
+.sw-links { font-size: .95em; }
+.sw-link + .sw-link::before { content: "·"; margin-right: .4em; color: #a5a5a5; }
+.sw-private { font-style: italic; color: var(--muted); }
+.software-detail { margin-bottom: 1pt; }
+
+/* ---------- Mentees: name | topic · now | years ---------- */
+.mentee p { display: grid; grid-template-columns: 1.25in minmax(0, 1fr) .85in; column-gap: 10pt; align-items: baseline; }
+.mentee { margin-bottom: 2pt; break-inside: avoid; }
+.m-detail { padding-left: var(--indent); text-indent: calc(-1 * var(--indent)); }
+.m-now { color: var(--muted); }
+.m-now::before { content: "·"; margin: 0 .4em 0 .1em; color: #a5a5a5; }
+.m-label { font-variant-caps: all-small-caps; letter-spacing: .05em; color: var(--faint); margin-right: .1em; }
+.m-years { text-align: right; color: var(--muted); font-variant-numeric: tabular-nums lining-nums; }
+
+/* ---------- Notes and footer ---------- */
+.cv .section-note { font-style: italic; font-size: .92em; line-height: 1.3; color: var(--muted); margin-bottom: 6pt; }
+.cv-footer { margin-top: 18pt; font-style: italic; font-size: 8.5pt; color: var(--muted); }
+
+/* ---------- Narrow screens ---------- */
+@media screen and (max-width: 700px) {
+  .cv { max-width: calc(100% - 16px); padding: 26px 18px; }
+  .cv h1 { font-size: 21pt; }
+  .dated { grid-template-columns: minmax(0, 1fr) 70px; }
+  .mentee p { grid-template-columns: 1fr; }
+  .m-years { text-align: left; }
+}
+
+/* ---------- Print ---------- */
+@page {
+  size: letter;
+  margin: .8in 1in .75in;
+  @bottom-left { content: "Jon Schwenk · Curriculum Vitae"; font: 400 8pt "Pagella CV", "Palatino Linotype", Georgia, serif; letter-spacing: .03em; color: #8a8a8a; }
+  @bottom-right { content: counter(page) " / " counter(pages); font: 400 8pt "Pagella CV", "Palatino Linotype", Georgia, serif; color: #8a8a8a; }
+}
+@media print {
+  html, body { background: #fff; }
+  .screen-bar { display: none !important; }
+  .cv { width: auto; max-width: none; margin: 0; padding: 0; box-shadow: none; }
+  .cv h2, .cv h3, .appointment, .education-institution, .software-title { break-after: avoid; }
+  .cv p { orphans: 3; widows: 3; }
+  .entry, .record, .mentee, .education-group, .appointment, .dated { break-inside: avoid; }
+  .cv-header, .cv-footer { break-inside: avoid; }
+}
