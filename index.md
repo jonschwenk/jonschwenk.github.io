@@ -16,7 +16,7 @@ layout: home
 
 ## If you’re here for…
 
-- **Projects and impact:** [Featured software](/software/) · [CV](/cv/)
+- **Projects and impact:** [Featured software](/software/) · [CV]({{ '/assets/cv/schwenk_cv.html' | relative_url }})
 - **Research and publications:** [Research](/research/) · [Publications](/publications/)
 - **Opportunities and collaborations:** [People + mentorship](/people/) · [Contact](/contact/)
 
