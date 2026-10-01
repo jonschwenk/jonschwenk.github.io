@@ -359,9 +359,18 @@ body {
 }
 
 .software-feature__media--contain img {
-  padding: 1.1rem;
+  padding: 0.65rem;
   box-sizing: border-box;
   object-fit: contain;
+}
+
+.software-feature__media--rivgraph,
+.software-feature__media--vote {
+  height: 370px;
+}
+
+.software-feature__media--rivgraph {
+  background: #0b1018;
 }
 
 .software-feature__media--vote {
@@ -369,8 +378,8 @@ body {
 }
 
 .software-feature__media--deepreservoir img {
-  filter: saturate(0.78) contrast(1.04) brightness(0.84);
-  object-position: 56% center;
+  filter: saturate(0.9) contrast(1.04) brightness(0.82);
+  object-position: center 62%;
   transform: scale(1.015);
 }
 
@@ -501,9 +510,17 @@ body {
   outline-offset: 3px;
 }
 
-.software-link--pending {
-  color: #566571;
-  font-weight: 500;
+.software-photo-credit {
+  margin: 0.65rem 0 0;
+  color: var(--software-muted);
+  font-size: 0.72rem;
+  line-height: 1.4;
+}
+
+.software-photo-credit a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 .software-card-grid {
@@ -725,6 +742,11 @@ body {
   .software-feature--lead .software-feature__media {
     height: 205px;
     min-height: 0;
+  }
+
+  .software-feature__media--rivgraph,
+  .software-feature__media--vote {
+    height: 290px;
   }
 
   .software-feature__content,

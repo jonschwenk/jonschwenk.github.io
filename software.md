@@ -16,12 +16,12 @@ permalink: /software/
 
     <div class="software-feature-grid">
       <article class="software-feature software-feature--lead" id="deepreservoir">
-        <div class="software-feature__media software-feature__media--deepreservoir" aria-hidden="true">
-          <img src="{{ '/assets/images/index/human_impacts_banner2.png' | relative_url }}" alt="" />
+        <div class="software-feature__media software-feature__media--deepreservoir">
+          <img src="{{ '/assets/images/software/deepreservoir/navajo_lake.jpeg' | relative_url }}" alt="Aerial view of Navajo Reservoir in New Mexico" />
           <span class="software-feature__eyebrow">Reservoir operations + reinforcement learning</span>
         </div>
         <div class="software-feature__content">
-          <p class="software-status">In active development · Repository coming soon</p>
+          <p class="software-status">Open source · In active development</p>
           <h3 id="deepreservoir-title">DeepReservoir-Navajo</h3>
           <p class="software-feature__summary">A deep reinforcement learning framework for optimizing reservoir operations in a virtual hydropower-reservoir environment. Scenario-driven rules, constraints, and objectives make it possible to test alternative operational strategies quickly.</p>
           <ul class="software-meta" aria-label="DeepReservoir-Navajo technologies">
@@ -30,14 +30,15 @@ permalink: /software/
             <li>Simulation environments</li>
           </ul>
           <div class="software-links">
-            <span class="software-link--pending" aria-label="GitHub repository coming soon">GitHub — coming soon</span>
+            <a href="https://github.com/VeinsOfTheEarth/DeepReservoir-Navajo">GitHub</a>
             <a href="{{ '/contact/' | relative_url }}">Contact</a>
           </div>
+          <p class="software-photo-credit">Navajo Reservoir photo: <a href="https://commons.wikimedia.org/wiki/File:Navajo_Lake.jpeg">U.S. Bureau of Reclamation</a> (public domain)</p>
         </div>
       </article>
 
       <article class="software-feature" id="rivgraph">
-        <div class="software-feature__media software-feature__media--contain">
+        <div class="software-feature__media software-feature__media--contain software-feature__media--rivgraph">
           <img src="{{ '/assets/images/software/rivgraph/rivgraph_directionality.png' | relative_url }}" alt="A river channel network with automatically assigned flow directions" loading="lazy" />
         </div>
         <div class="software-feature__content">
