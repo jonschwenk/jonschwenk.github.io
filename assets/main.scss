@@ -364,11 +364,6 @@ body {
   object-fit: contain;
 }
 
-.software-feature__media--rivgraph,
-.software-feature__media--vote {
-  height: 370px;
-}
-
 .software-feature__media--rivgraph {
   background: #0b1018;
 }
@@ -742,11 +737,6 @@ body {
   .software-feature--lead .software-feature__media {
     height: 205px;
     min-height: 0;
-  }
-
-  .software-feature__media--rivgraph,
-  .software-feature__media--vote {
-    height: 290px;
   }
 
   .software-feature__content,

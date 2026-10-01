@@ -39,7 +39,7 @@ permalink: /software/
 
       <article class="software-feature" id="rivgraph">
         <div class="software-feature__media software-feature__media--contain software-feature__media--rivgraph">
-          <img src="{{ '/assets/images/software/rivgraph/rivgraph_directionality.png' | relative_url }}" alt="A river channel network with automatically assigned flow directions" loading="lazy" />
+          <img src="{{ '/assets/images/software/rivgraph/rivgraph_overview.png' | relative_url }}" alt="RivGraph workflow showing a channel mask, extracted network topology, and assigned flow directions" loading="lazy" />
         </div>
         <div class="software-feature__content">
           <p class="software-status">Open source · Published</p>
@@ -55,6 +55,7 @@ permalink: /software/
             <a href="https://doi.org/10.21105/joss.02952">JOSS</a>
             <a href="https://www.earth-surf-dynam.net/8/87/2020/esurf-8-87-2020.html">Methods paper</a>
           </div>
+          <p class="software-photo-credit">Figure: <a href="https://github.com/VeinsOfTheEarth/RivGraph/blob/master/examples/images/rivgraph_overview.PNG">RivGraph project</a></p>
         </div>
       </article>
 
